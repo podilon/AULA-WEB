@@ -4,140 +4,203 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutorial GitHub Pages</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f6f8;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
             color: #333;
-            line-height: 1.6;
         }
 
         header {
-            background: #24292e;
-            color: white;
-            padding: 20px;
             text-align: center;
+            padding: 60px 20px;
+            color: white;
         }
 
-        section {
-            padding: 20px;
-            margin: 20px;
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+
+        header p {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .card {
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
         }
 
-        h1, h2 {
-            margin-top: 0;
+        .card:hover {
+            transform: translateY(-5px);
         }
 
-        code {
-            background: #eee;
-            padding: 4px 6px;
-            border-radius: 4px;
+        h2 {
+            margin-bottom: 20px;
+            color: #4c51bf;
         }
 
         .step {
-            background: #eef5ff;
-            padding: 10px;
-            border-left: 4px solid #0366d6;
-            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
         }
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #24292e;
-            color: white;
-            margin-top: 40px;
+        .step i {
+            font-size: 1.5rem;
+            color: #667eea;
+            margin-top: 5px;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 5px 8px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        ul {
+            padding-left: 20px;
         }
 
         .btn {
             display: inline-block;
-            padding: 10px 15px;
-            background: #0366d6;
+            background: #667eea;
             color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
+            margin-top: 15px;
+            transition: 0.3s ease;
         }
 
         .btn:hover {
-            background: #024ea2;
+            background: #5a67d8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: white;
+            opacity: 0.8;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>🚀 Tutorial GitHub Pages</h1>
-    <p>Aprenda a transformar seu repositório em um site online</p>
+    <h1><i class="fa-brands fa-github"></i> Tutorial GitHub Pages</h1>
+    <p>Publique seu site gratuitamente direto do seu repositório 🚀</p>
 </header>
 
-<section>
-    <h2>📌 O que é GitHub Pages?</h2>
-    <p>
-        O GitHub Pages é um serviço gratuito do GitHub que permite hospedar
-        sites estáticos diretamente de um repositório.
-    </p>
-</section>
+<div class="container">
 
-<section>
-    <h2>🛠 Passo a Passo</h2>
-
-    <div class="step">
-        <strong>1️⃣ Criar um repositório</strong><br>
-        Acesse o GitHub e clique em <code>New Repository</code>.
+    <div class="card">
+        <h2><i class="fa-solid fa-circle-info"></i> O que é?</h2>
+        <p>
+            GitHub Pages é um serviço gratuito que permite hospedar sites estáticos
+            diretamente de um repositório.
+        </p>
     </div>
 
-    <div class="step">
-        <strong>2️⃣ Criar o arquivo index.html</strong><br>
-        Dentro do repositório, crie um arquivo chamado <code>index.html</code>.
+    <div class="card">
+        <h2><i class="fa-solid fa-list-check"></i> Passo a Passo</h2>
+
+        <div class="step">
+            <i class="fa-solid fa-folder-plus"></i>
+            <div>
+                <strong>1. Criar um repositório</strong><br>
+                Clique em <code>New Repository</code>.
+            </div>
+        </div>
+
+        <div class="step">
+            <i class="fa-solid fa-file-code"></i>
+            <div>
+                <strong>2. Criar o arquivo index.html</strong><br>
+                O arquivo principal deve se chamar <code>index.html</code>.
+            </div>
+        </div>
+
+        <div class="step">
+            <i class="fa-solid fa-gear"></i>
+            <div>
+                <strong>3. Ativar o Pages</strong><br>
+                Vá em <code>Settings → Pages</code><br>
+                Selecione a branch <code>main</code>.
+            </div>
+        </div>
+
+        <div class="step">
+            <i class="fa-solid fa-globe"></i>
+            <div>
+                <strong>4. Acessar seu site</strong><br>
+                <code>https://SEUUSUARIO.github.io/NOME-REPO/</code>
+            </div>
+        </div>
     </div>
 
-    <div class="step">
-        <strong>3️⃣ Ativar o GitHub Pages</strong><br>
-        Vá em <code>Settings → Pages</code><br>
-        Em <code>Source</code>, selecione a branch <code>main</code> e clique em <code>Save</code>.
-    </div>
-
-    <div class="step">
-        <strong>4️⃣ Acessar seu site</strong><br>
-        O site ficará disponível em:<br>
-        <code>https://SEUUSUARIO.github.io/NOME-DO-REPO/</code>
-    </div>
-</section>
-
-<section>
-    <h2>📂 Estrutura básica do projeto</h2>
-<pre>
-/meu-projeto
+    <div class="card">
+        <h2><i class="fa-solid fa-folder-tree"></i> Estrutura Recomendada</h2>
+        <pre>
+/projeto
  ├── index.html
  ├── css/
  ├── js/
- └── imagens/
-</pre>
-</section>
+ └── assets/
+        </pre>
+    </div>
 
-<section>
-    <h2>🎯 Dicas Importantes</h2>
-    <ul>
-        <li>O GitHub Pages aceita apenas HTML, CSS e JavaScript.</li>
-        <li>Não funciona com PHP ou banco de dados.</li>
-        <li>Ideal para portfólio, landing pages e documentação.</li>
-    </ul>
-</section>
+    <div class="card">
+        <h2><i class="fa-solid fa-lightbulb"></i> Dicas Importantes</h2>
+        <ul>
+            <li>Funciona apenas com HTML, CSS e JavaScript.</li>
+            <li>Não suporta backend como PHP.</li>
+            <li>Ideal para portfólio e landing pages.</li>
+        </ul>
 
-<section style="text-align:center;">
-    <h2>🔥 Agora é sua vez!</h2>
-    <p>Crie seu repositório e publique seu primeiro site.</p>
-    <a href="https://github.com" class="btn" target="_blank">Ir para GitHub</a>
-</section>
+        <a href="https://github.com" target="_blank" class="btn">
+            <i class="fa-brands fa-github"></i> Acessar GitHub
+        </a>
+    </div>
+
+</div>
 
 <footer>
-    <p>Curso de Desenvolvimento Web • Aula de GitHub Pages</p>
+    Curso de Desenvolvimento Web • Aula de GitHub Pages
 </footer>
 
 </body>
